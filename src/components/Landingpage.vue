@@ -1,9 +1,9 @@
 <template>
-    <div class="bg-primary px-64">
+    <div class="bg-primary px-10 md:px-64">
         <div class="flex justify-between py-10">
             <div class="flex justify-evenly items-baseline">
                 <img src="https://wise.com/public-resources/assets/logos/wise/brand_logo_inverse.svg" alt="Wise" class="pr-4">
-                <div class="grid grid-cols-3 divide-x text-white font-bold">
+                <div class="xs:hidden sm:block grid grid-cols-3 divide-x text-white font-bold">
                     <div class="text-2xl pr-4 text-primary-light cursor-pointer"> Personal </div>
                     <div class="text-2xl pl-4 cursor-pointer"> Business </div>
                 </div>
