@@ -4,15 +4,15 @@
             <div class="useCase1"></div>
             <div class="grid place-items-center text-left h-screen px-8">
                 <div class="px-20">
-                    <div class="title ">
+                    <div class="text-primary-light text-4xl">
                         Global support in a range of languages
                         <span class="dot"></span>
                         <!-- use css ::after to add this part, content: '' -->
                     </div>
-                    <div class="content">
+                    <div class="text-text-gray mt-6">
                         We don’t do complicated, automated systems. We have offices around the world, and we’re here to help you whenever you need it.
                     </div>
-                    <button class="mt-4 py-2 px-4 border border-blue-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white">
+                    <button class="text-2xl my-12 py-4 px-8 border border-primary-light hover:border-primary-light hover:bg-primary-light transition hover:transition ease-in-out hover:ease-in-out text-primary-light hover:text-white">
                         See most frequently asked questions
                     </button>
                 </div>

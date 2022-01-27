@@ -16,7 +16,7 @@
                 <div class="text-xl font-bold text-center text-primary pb-4 h-16">
                     {{ option.title }}
                 </div>
-                <div class="text-center text-gray-500 pb-4">
+                <div class="text-center text-text-gray opacity-60 pb-4">
                      {{ option.content }}
                 </div>
                 <div v-if="option.link" class="expandable-link  flex justify-center items-baseline  text-primary-light font-bold cursor-pointer" >

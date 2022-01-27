@@ -5,14 +5,14 @@
                 <div class="px-20">
                     <div class="title text-primary">
                         {{ useCase.title }}
-                        <span class="dot"></span>
+                        <span class="dot text-primary-light"></span>
                         <!-- use css ::after to add this part, content: '' -->
                     </div>
                     <div v-for="content in useCase.contentArr" :key="content.id">
                         <div class="subtitle text-primary">
                             {{ content.subtitle }}
                         </div>
-                        <div class="content ">
+                        <div class="content text-text-gray opacity-60">
                             {{ content.description }}
                         </div>
                     </div>

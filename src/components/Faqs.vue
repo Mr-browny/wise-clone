@@ -1,18 +1,19 @@
 
 <template>
-    <div class="px-64 bg-gray-200">
+    <div class="px-28 bg-gray">
         <div class="text-center pt-24">
-            <div class="text-gray-300"> Frequently asked questions </div>
-            <div class="text-3xl text-white mb-10">
+            <div class="text-text-gray font-bold"> Frequently asked questions </div>
+            <div class="text-4xl text-primary font-bold mb-6">
                 Let's answer some of your questions
+                <span class="dot"></span>
             </div>
         </div>
-        <div class="pt-20 pb-10">
+        <div class="pt-10 pb-10">
             <div class="grid gap-4">
-                <div class="p-8 border border-gray-300 bg-white cursor-pointer" v-for="i in 5" :key="i" @click="openAccordion(i)">
-                    <div class="title text-xl flex justify-between items-center">
+                <div class="p-8 border border-gray bg-white cursor-pointer" v-for="i in 5" :key="i" @click="openAccordion(i)">
+                    <div class="text-primary text-xl flex justify-between items-center">
                         <div> What is a multi-currency account and how does it work? </div>
-                        <div class="font-bold text-4xl text-blue-500" :class="accordionStatus == i ? 'rotateArrow' : '' "> ^ </div>
+                        <div class="font-bold text-4xl text-primary-light" :class="accordionStatus == i ? 'rotateArrow' : '' "> ^ </div>
                     </div>
                     <div v-if="accordionStatus == i" class="content ">
                         <p>You can hold, receive, send, and spend money using a Wise multi-currency account.

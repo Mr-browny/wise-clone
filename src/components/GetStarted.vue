@@ -2,23 +2,23 @@
     <div class="linear_gradient text-white py-24 px-64">
         <!-- you will be using a linear gradient here.. -->
         <div class="text-center">
-            <div class="text-gray-300"> Getting started</div>
-            <div class="text-3xl mb-10">
-                Get set up and start spending with your card in minutes.
+            <div class="text-lg"> Getting started</div>
+            <div class="text-4xl font-bold pt-8 pb-24">
+                Get set up and start spending with your card in <br> minutes.
             </div>
             <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
                 <div v-for="getStarted in getStartedArr" :key="getStarted.id">
-                    <div class="font-bold text-lg mb-8"> {{ getStarted.title }} </div>
+                    <div class="font-bold text-2xl mb-8"> {{ getStarted.title }} </div>
                     <!-- Add an image here and use vif to toggle it -->
                     <div v-if="!getStarted.title" class="flex justify-center" style="margin-top: -48px;">
                         <img src="@/assets/icons/good.png" width="58" height="58" class="mb-4" />
                     </div>
-                    <div class="text-gray-300">
+                    <div class="">
                         {{ getStarted.content }}
                     </div>
                 </div>
             </div>
-            <button class="btn my-12 py-2 px-4 border border-white hover:border-blue-500 hover:bg-blue-500 text-white"> Get an account in minutes </button>
+            <button class="text-2xl my-12 py-4 px-8 border border-white hover:border-primary-light hover:bg-primary-light transition ease-in-out hover:ease-in-out text-white"> Get an account in minutes </button>
         </div>
     </div>
 </template>
