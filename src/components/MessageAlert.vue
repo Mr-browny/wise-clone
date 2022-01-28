@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary-light px-28">
+  <div class="bg-primary-light px-28 hidden">
     <div class="p-4 flex justify-between">
       <div>
         <!-- <img src="@/assets/icons/svg/arrow_right.svg" /> -->

@@ -1,9 +1,10 @@
 <template>
     <div class="text-left">
-        <div class="grid gap-0 grid-cols-12 sm:grid-cols-2 h-screen" v-for="useCase in useCaseArr" :key="useCase.id">
+        <!-- <div class="grid gap-0 grid-cols-12 md:grid-cols-2 h-screen" v-for="useCase in useCaseArr" :key="useCase.id"> -->
+        <div class="grid gap-0 grid-cols-1 md:grid-cols-2 h-screen" v-for="useCase in useCaseArr" :key="useCase.id">
             <div class="grid place-items-center h-screen px-8" :class="useCase.id % 2 ==0 ? 'order-last': 'order-first'">
-                <div class="px-20">
-                    <div class="title text-primary">
+                <div class="px-0 text-center md:text-left md:px-20">
+                    <div class="title text-2xl md:text-3xl text-primary">
                         {{ useCase.title }}
                         <span class="dot text-primary-light"></span>
                         <!-- use css ::after to add this part, content: '' -->
@@ -18,14 +19,16 @@
                     </div>
                 </div>
             </div>
-            <div class="useCase1" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div>
+            <!-- <div class="useCase1" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div> -->
+            <!-- <div class="useCase1 h-96 md:h-full" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div> -->
+            <img :src="useCase.bgImg" />
+            <!-- <div class="useCase1" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div> -->
         </div>
     </div>
 </template>
 
 <style scoped>
     .title{
-        font-size: 25px;
         font-weight: bolder;
     }
     .title::after{
@@ -43,8 +46,9 @@
     }
     .useCase1 {
         /* background-image: url('../assets/img/usecase1.jpg'); */
-        /* height: 800px; */
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 </style>
 
