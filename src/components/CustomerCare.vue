@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div class="grid gap-0 grid-cols-12 sm:grid-cols-2 h-screen">
+        <div class="grid gap-0 grid-cols-1 lg:grid-cols-2 h-screen">
             <div class="useCase1"></div>
             <div class="grid place-items-center text-left h-screen px-8">
-                <div class="px-20">
+                <div class="px-2 text-center lg:text-left lg:px-20">
                     <div class="text-primary-light text-4xl">
                         Global support in a range of languages
                         <span class="dot"></span>

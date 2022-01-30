@@ -1,5 +1,5 @@
 <template>
-    <div class="px-28 bg-gray">
+    <div class="px-8 lg:px-28 bg-gray">
         <div class="text-center pt-24">
             <div class="text-text-gray"> Security </div>
             <div class="text-primary text-4xl mb-6">

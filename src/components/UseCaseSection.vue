@@ -21,8 +21,8 @@
             </div>
             <!-- <div class="useCase1" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div> -->
             <!-- <div class="useCase1 h-96 md:h-full" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div> -->
-            <img :src="useCase.bgImg" />
-            <!-- <div class="useCase1" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div> -->
+            <!-- <img :src="useCase.bgImg" /> -->
+            <div class="useCase1" :style="{ backgroundImage: 'url(' + useCase.bgImg + ')' }"></div>
         </div>
     </div>
 </template>

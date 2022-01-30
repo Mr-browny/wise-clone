@@ -1,33 +1,116 @@
 <template>
-    <div class="bg-landing-page-light px-4 md:px-28">
+    <div class="bg-landing-page-light px-4 lg:px-12">
         <!-- <div class="skewed_bg h-full bg-landing-page-dark"></div> -->
         <div class="flex justify-between py-10">
             <div class="flex justify-start items-baseline w-6/12">
                 <img src="https://wise.com/public-resources/assets/logos/wise/brand_logo_inverse.svg" alt="Wise" class="pr-4">
-                <div class="hidden md:flex text-white font-bold">
+                <div class="hidden lg:flex text-white font-bold">
                     <div class="text-2xl pr-4 text-primary-light cursor-pointer"> Personal </div>
                     <div class="w-px h-8 bg-text-gray"></div>
                     <div class="text-2xl pl-4 cursor-pointer hover:text-primary-light"> Business </div>
                 </div>
             </div>
-            <div class="hidden md:flex w-3/4 pt-2 justify-evenly items-baseline font-bold text-xl text-white">
-                <div class="cursor-pointer mx-2"> Money transfer  &#9660;</div>
-                <div class="cursor-pointer mx-2"> Multi-currency account  &#9660; </div>
-                <div class="cursor-pointer mx-2"> Help </div>
-                <div class="cursor-pointer mx-2"> &#127760; EN  &#9660;</div>
-                <div class="cursor-pointer mx-2"> Log in</div>
+            <div class="hidden lg:flex w-3/4 justify-evenly items-baseline  font-bold text-xl text-white">
+                <div class="relative">
+                    <div class="link-title text-sm cursor-pointer hover:text-primary-light transition ease-in-out hover:transition">
+                        Money transfer
+                        <span class="text-xs"> &#9660; </span>
+                    </div>
+                    <div class="card">
+                        <div class="pointer"></div>
+                        <div class="header cursor-pointer">
+                            <div>
+                                <img src="https://daw291njkc3ao.cloudfront.net/conversion/navigation/send-money.svg" alt="icon" width="" height="" />
+                            </div>
+                            <div class="flex text-primary-dark py-4">
+                               Send Money
+                                <span class="ml-2 caret-right text-primary-light"> > </span>
+                            </div>
+                            <div class="text-text-gray opacity-50 text-sm">
+                                Make a one off-payment. You'll get the real exchange rage with the low fee we're known for.
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="divider"></div>
+                            <ul class="list grid gap-4">
+                                <li v-for="i in moneyTransferArr" :key="i" class="text-primary-dark cursor-pointer">
+                                    <div class="flex">
+                                        {{ i }}
+                                        <span class="ml-2 caret-right text-primary-light"> > </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="link-title text-sm cursor-pointer hover:text-primary-light transition ease-in-out hover:transition">
+                        Multi-currency account
+                        <span class="text-xs"> &#9660; </span>
+                    </div>
+                    <div class="card">
+                        <div class="pointer"></div>
+                        <div class="header cursor-pointer">
+                            <div>
+                                <img src="https://wise.com/public-resources/assets/public-navigation/multi_currency_account_v2.svg" alt="icon" width="" height="" />
+                            </div>
+                            <div class="flex text-primary-dark py-4">
+                               Multi-currency account
+                                <span class="ml-2 caret-right text-primary-light"> > </span>
+                            </div>
+                            <div class="text-text-gray opacity-50 text-sm">
+                                Manage your money accross 50+
+                                currencies. Send at the real exchange rate, and spend with
+                                a Wise debit card.
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="divider"></div>
+                            <ul class="list grid gap-4">
+                                <li v-for="i in multiCurrencyAccountArr" :key="i" class="text-primary-dark cursor-pointer">
+                                    <div class="flex">
+                                        {{ i }}
+                                        <span class="ml-2 caret-right text-primary-light"> > </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer"> Help </div>
+                <div class="relative">
+                    <div class="link-title text-sm cursor-pointer hover:text-primary-light transition ease-in-out hover:transition">
+                        &#127760; EN
+                        <span class="text-xs"> &#9660; </span>
+                    </div>
+                    <div class="card">
+                        <div class="pointer"></div>
+                        <div class="header">
+                            <div class="text-primary text-2xl"> Hello World </div>
+                        </div>
+                        <div class="content">
+                            <div class="divider"></div>
+                            <ul class="list grid grid-cols-2 gap-4">
+                                <li v-for="i in 16" :key="i" class="text-text-gray hover:text-primary-light cursor-pointer transition hover:transition ease-in-out"> Deutsh </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer"> Log in</div>
             </div>
-            <div class="cursor-pointer mx-2 border border-solid border-primary-light text-primary-light transition ease-in-out hover:transition hover:ease-in-out hover:bg-primary-light hover:text-white px-4 py-2"> Register </div>
+            <div class="grid items-center">
+                <div class="cursor-pointer border border-solid border-primary-light text-primary-light transition ease-in-out hover:transition hover:ease-in-out hover:bg-primary-light hover:text-white px-4 py-2 items-baseline"> Register </div>
+            </div>
         </div>
-        <div class="pt-10 pb-20 grid grid-cols-1 sm:grid-cols-2">
+        <div class="pt-10 sm:px-24 pb-20 grid grid-cols-1 lg:grid-cols-2">
             <div class="flex flex-col justify-between">
-                <div class="md:hidden flex justify-center mt-4 mb-8">
+                <div class="lg:hidden flex justify-center mt-4 mb-8">
                     <div class="video_pulse bg-primary-light text-white w-28 h-28 rounded-full grid items-center text-center text-5xl">
                         <div class="text-white"> &#9660; </div>
                     </div>
                 </div>
-                <div class="text-2xl md:text-4xl mb-12 md:mb-0 text-white font-bold text-center md:text-left"> The cheap, fast wasy to send money <br> abroad. </div>
-                <div class="hidden md:flex">
+                <div class="text-2xl md:text-4xl mb-12 md:mb-0 text-white font-bold text-center lg:text-left"> The cheap, fast wasy to send money <br> abroad. </div>
+                <div class="hidden lg:flex">
                     <div class="video_pulse bg-primary-light text-white w-28 h-28 rounded-full grid items-center text-center text-5xl">
                         <div class="text-white"> &#9660; </div>
                     </div>
@@ -35,7 +118,7 @@
                         <div class="cursor-pointer transition ease-in-out hover:opacity-90 text-xl"> See how it works </div>
                     </div>
                 </div>
-                <div class="hidden md:grid grid-cols-2">
+                <div class="hidden lg:grid grid-cols-2">
                     <div>
                         <h3 class="text-white"> Over 12 million customers </h3>
                         <div class="expandable-link  flex items-baseline  text-primary-light font-bold cursor-pointer transition ease-in-out hover:opacity-90">
@@ -60,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="md:pl-44">
+            <div class="lg:pl-30 mt-24 lg:mt-0">
                 <div class="flex">
                     <div class="bg-white py-2 w-full">
                         <div class="text-lg px-4 text-text-gray opacity-60"> You send </div>
@@ -108,14 +191,14 @@
                         <div class="text-primary-light">  &#9660; </div>
                     </div>
                 </div>
-                <div class="mt-8 hidden md:grid grid-cols-2 divide-x text-center text-white">
-                    <div class="text-lg pr-4">
-                        <div> You could save vs banks </div>
-                        <div> 24.61 GBP </div>
+                <div class="mt-8 hidden md:grid grid-cols-2 divide-x divide-primary-dark text-center text-white">
+                    <div class="pr-4">
+                        <div class="text-white opacity-60 text-md"> You could save vs banks </div>
+                        <div class="text-lg"> 24.61 GBP </div>
                     </div>
-                    <div class="text-lg pl-4">
-                        <div> Should arrive </div>
-                        <div> in 5 hours </div>
+                    <div class="pl-4">
+                        <div class="text-white opacity-60 text-md"> Should arrive </div>
+                        <div class="text-lg"> in 5 hours </div>
                     </div>
                 </div>
                 <div class="grid gap-4 md:gap-12 md:grid-cols-2 mt-8">
@@ -136,6 +219,12 @@
 
 <script>
 export default {
-    name: 'LandingPage'
+    name: 'LandingPage',
+    data () {
+        return {
+            multiCurrencyAccountArr: ['Product features', 'Pricing', 'Use cases', 'Getting started', 'Protecting your money', 'Coverage'],
+            moneyTransferArr: ['Send large amounts', 'Send money for students', 'About wise']
+        }
+    }
 }
 </script>

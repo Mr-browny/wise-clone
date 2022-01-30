@@ -1,5 +1,5 @@
 <template>
-    <div class="px-28">
+    <div class="px-8 lg:px-28">
         <div class="text-center pt-24">
             <div class="text-text-gray font-bold"> Coverage </div>
             <div class="text-4xl font-bold text-primary mb-6">
@@ -30,7 +30,7 @@
                 <div class="text-text-gray"> You can hold and convert money in 54 currencies. It only takes a few seconds to open a new balance in the currency you need. </div>
             </div>
             <div class="pt-20 pb-10">
-                <div class="grid gap-4 grid-cols-2 sm:grid-cols-4">
+                <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <div v-for="i in 56" :key="i">
                         <div class="flex items-center pb-2">
                             <div class="mr-4">
@@ -50,7 +50,7 @@
                 <div class="text-text-gray"> You can use money in your multi-currency account to send to any of the countries on Wise. </div>
             </div>
             <div class="pt-20 pb-10">
-                <div class="grid gap-4 grid-cols-2 sm:grid-cols-4">
+                <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <div v-for="i in 56" :key="i">
                         <div class="flex items-center pb-2">
                             <div class="mr-4">

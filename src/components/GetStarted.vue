@@ -1,13 +1,18 @@
 <template>
-    <div class="linear_gradient text-white py-24 px-64">
+    <div class="linear_gradient text-white py-24 px-8 sm:24 lg:px-54">
         <!-- you will be using a linear gradient here.. -->
         <div class="text-center">
             <div class="text-lg"> Getting started</div>
-            <div class="text-4xl font-bold pt-8 pb-24">
+            <div class="text-4xl font-bold pt-8 pb-8 md:pb-24">
                 Get set up and start spending with your card in <br> minutes.
             </div>
-            <div class="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-                <div v-for="getStarted in getStartedArr" :key="getStarted.id">
+            <div class="grid gap-5 grid-cols-1 md:grid-cols-4">
+                <div class="md:hidden text-center">
+                    <div>
+                        {{ firstGetStartedArr.content }}
+                    </div>
+                </div>
+                <div class="hidden md:block" v-for="getStarted in getStartedArr" :key="getStarted.id">
                     <div class="font-bold text-2xl mb-8"> {{ getStarted.title }} </div>
                     <!-- Add an image here and use vif to toggle it -->
                     <div v-if="!getStarted.title" class="flex justify-center" style="margin-top: -48px;">
@@ -32,6 +37,12 @@
 <script>
 export default {
     name: 'GetStarted',
+    computed: {
+        firstGetStartedArr () {
+            const _ = this
+            return _.getStartedArr[0]
+        }
+    },
     data () {
         return {
             getStartedArr: [

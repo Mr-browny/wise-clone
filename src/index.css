@@ -76,3 +76,63 @@
 	transform: translate(-50%, -50%);
 
 }
+
+/* Hovering Nav Card */
+.relative .link-title{
+	padding: 1em;
+	text-overflow: ellipsis;
+}
+.relative > .card {
+	transition: 0.3s all ease-out;
+	display: none;
+}
+.relative:hover > .card {
+	transition: 0.3s all ease-out;
+	display: block;
+}
+.card {
+	background-color: white;
+	border-radius: 5px;
+	/* white-space: nowrap; */
+	width: 350px;
+	/* min-width: 350px; */
+	position: absolute;
+	right: -5px;
+	top: 45px;
+	z-index: 1;
+}
+.card .pointer {
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -5px;
+	right: 22px;
+}
+.card .divider {
+	width: 100%;
+	background-color: rgba(128, 128, 128, 0.322);
+	height: 1px;
+	margin: 20px 0px;
+}
+.card .header{
+	padding: 40px 40px 20px;
+}
+.card .content {
+	background-color: rgba(128, 128, 128, 0.068);
+}
+.card ul.list {
+	padding: 20px 40px;
+}
+.card ul.list li {
+	font-size: 12px;
+}
+.card ul.list li span.caret-right {
+	display: none;
+	transition: 3s all ease-in-out;
+}
+.card ul.list li:hover span.caret-right {
+	display: block;
+	transition: 3s all ease-in-out;
+}
