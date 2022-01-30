@@ -1,10 +1,10 @@
 <template>
-    <div class="p-64 bg-primary text-white">
+    <div class="p-12 lg:p-64 bg-primary text-white">
         <div>
-            <div class="grid grid-cols-4 pb-8">
-                <div>
+            <div class="grid grid-cols-1 md:grid-cols-4 pb-8">
+                <div class="text-center">
                     <div class="font-bold text-xl pb-4"> Company and team </div>
-                    <ul>
+                    <ul class="text-center">
                         <li>
                             <a href="#" class="underline"> Company and team </a>
                         </li>
@@ -31,9 +31,9 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="text-center">
                     <div class="font-bold text-xl pb-4"> Help and support </div>
-                    <ul>
+                    <ul class="text-center">
                         <li>
                             <a href="#" class="underline"> Help centre </a>
                         </li>
@@ -42,17 +42,17 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="text-center">
                     <div class="font-bold text-xl pb-4"> Learn more </div>
-                    <ul>
+                    <ul class="text-center">
                         <li>
                             <a href="#" class="underline"> Legal </a>
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="text-center">
                     <div class="font-bold text-xl pb-4"> Follow us </div>
-                    <ul>
+                    <ul class="text-center">
                         <li>
                             <a href="#" class="underline"> Legal </a>
                         </li>
@@ -63,8 +63,8 @@
                 </div>
             </div>
             <hr>
-            <div class="grid grid-cols-4 pt-8">
-                <div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 pt-8">
+                <div class="hidden md:block">
                     <img src="https://wise.com/public-resources/assets/logos/wise/brand_logo_inverse.svg" alt="Wise">
                 </div>
                 <div>
@@ -99,6 +99,15 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+    ul li {
+        margin: 10px 0px;
+    }
+    ul li a {
+        text-decoration: underline;
+    }
+</style>
 
 <script>
 export default {
